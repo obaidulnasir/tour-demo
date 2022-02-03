@@ -1,13 +1,14 @@
 import React from 'react';
 import useAuth from '../../hook/useAuth';
+import About from './About/About';
+import Banner from './Banner/Banner';
 
 const Home = () => {
-    const {googleSignIn,user} = useAuth();
+    const { user} = useAuth();
     return (
         <div>
-            <h3>this is home</h3>
-
-            <button onClick={googleSignIn}>click me</button>
+            <Banner></Banner>
+            <About />
             <h4>{user?.displayName}</h4>
         </div>
     );
