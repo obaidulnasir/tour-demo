@@ -8,8 +8,9 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <About />
             <h4>{user?.displayName}</h4>
+            <About />
+            
         </div>
     );
 };

@@ -17,12 +17,16 @@ const Navigation = () => {
                         <Nav className="mx-auto">
                             {/* dropDown menu */}
                             <NavDropdown className="nav-link" title="Packages">
-                                <NavDropdown.Item href="#action/3.1">
-                                    <Link className="nav-link text-dark" to="/contact">Contact Us</Link>
+                                <NavDropdown.Item>
+                                    <Link className="nav-link text-dark" to="/umrahPackages">Umrah Packages</Link>
                                 </NavDropdown.Item>
-                                <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                                <NavDropdown.Divider />
-                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item>
+                                <NavDropdown.Item>
+                                    <Link className="nav-link text-dark" to="/tourPackages">Tour Packages </Link>
+                                </NavDropdown.Item>
+
+                                {/* divider */}
+                                {/* <NavDropdown.Divider />
+                                <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
                             </NavDropdown>
                             {/* nav link */}
                             <Nav.Link>
