@@ -9,6 +9,8 @@ import Contact from './components/Contact/Contact';
 import Umrah from './components/Packages/Umrah/Umrah';
 import Tour from './components/Packages/Tour/Tour';
 import Footer from './components/shared/Footer/Footer';
+import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
+import Dashboard from './components/Dashboard/Dashboard';
 
 function App() {
   return (
@@ -32,6 +34,9 @@ function App() {
             <Route path="/tourPackages">
               <Tour></Tour>
             </Route>
+            <PrivateRoute path="/dashboard">
+              <Dashboard></Dashboard>
+            </PrivateRoute>
             <Route exact path="/">
               <Home></Home>
             </Route>

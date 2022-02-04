@@ -35,12 +35,18 @@ const Navigation = () => {
                             <Nav.Link>
                                 <Link className="nav-link" to="/contact">Contact Us</Link>
                             </Nav.Link>
+                            <Nav.Link>
+                                <Link className="nav-link btn btn-info text-white" rule="button" to="/dashboard">Dashboard</Link>
+                            </Nav.Link>
 
                         </Nav>
                         <Nav>
                             {/* <Nav.Link href="#deets">Register</Nav.Link> */}
                             {
-                                user.email ? <Nav.Link><button onClick={handleSignOut}>Logout</button></Nav.Link> :
+                                user.email ? <div>
+                                    <Nav.Link><button onClick={handleSignOut}>Logout</button></Nav.Link> 
+                                    
+                                </div> :
                                     <Nav.Link>
                                         <Link className="nav-link" to="/login"><button className="btn btn-info">Register</button></Link>
                                     </Nav.Link>
