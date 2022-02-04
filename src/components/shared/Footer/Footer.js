@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container">
         <div className="row text-dark">
           <div className="col-md-4">
-            <h4>Travell</h4>
+            <h4>Travel</h4>
             <p className="fs-6">
             We believe that our beautiful collection should be available for every home. Shop your favorite handmade stoneware online by adding each item to your online shopping basket. If you are looking for a cute gift for a friend, we make sure to gift wrap your items with no extra charges.</p>
           </div>
