@@ -17,21 +17,23 @@ const BookNow = (props) => {
     //Make order
     const onSubmit = (data) => {
         console.log(data);
-        // fetch("http://localhost:5000/booking", {
-        //   method: "POST",
-        //   headers: { "content-type": "application/json" },
-        //   body: JSON.stringify(data),
-        // })
-        //   .then((res) => res.json())
-        //   .then((data) => {
-        //     alert("product added successfully!!");
-        //     reset();
-        //   });
+        fetch("http://localhost:5000/booking", {
+          method: "POST",
+          headers: { "content-type": "application/json" },
+          body: JSON.stringify(data),
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            alert("product added successfully!!");
+            reset();
+          });
     };
+    
     return (
         <div>
             <Row>
                 <Col>
+                <h2 className="text-info my-3">BOOKING HERE</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
                             <label>Name</label>
@@ -57,15 +59,26 @@ const BookNow = (props) => {
                 </small> */}
                         </div>
                         <div className="form-group">
-                            <label>Product</label>
+                            <label>Package</label>
                             <input
                                 type="text"
                                 className="form-control"
                                 defaultValue={packageName}
                                 placeholder=""
-                                {...register("id", { required: true })}
+                                {...register("package", { required: true })}
                             />
                         </div>
+                        {/* <div className="form-group">
+                            <label>PackageID</label>
+                            <input
+                                type="text"
+                                className="form-control"
+                                defaultValue={id}
+                                placeholder=""
+                                disabled
+                                {...register("id")}
+                            />
+                        </div> */}
                         <div className="form-group">
                             <label>Date</label>
                             <input

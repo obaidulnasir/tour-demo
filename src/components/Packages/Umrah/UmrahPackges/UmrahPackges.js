@@ -13,15 +13,14 @@ const UmrahPackges = () => {
 
     return (
         <div>
-            <h2>{umrahPac.length}</h2>
-            <h3>this is umrah packages</h3>
+          
 
-            <Container>
-                <Row xs={1} md={3} className="g-4">
+            <Container className="my-5">
+                <Row xs={1} md={3} className="g-4 ">
                     {umrahPac.map((pac) => (
                         <Col>
                             <Card className="p-3">
-                                <Card.Img variant="top" src="holder.js/100px160" />
+                                <Card.Img variant="top" src={pac?.img} />
                                 <Card.Body>
                                     <Card.Title>{pac.pakckageName}</Card.Title>
                                     <h4 className="fw-bold text-info">{pac.price} $</h4>

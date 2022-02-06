@@ -10,11 +10,11 @@ const Dashboard = () => {
     const { user } = useAuth();
     return (
         <div>
-            <div className="text-center">
-                <h3>this is dashboard</h3>
+            <div className="text-center my-5">
+                {/* <h3>this is dashboard</h3> */}
                 <div>
                     <img className="avatar" src={user?.photoURL} alt="img" />
-                    <h2>{user?.email}</h2>
+                    <h2>{user?.displayName}</h2>
                 </div>
                 <div>
                     <div className="d-grid gap-2 d-md-block">

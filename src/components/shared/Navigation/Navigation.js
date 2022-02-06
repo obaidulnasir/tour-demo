@@ -1,5 +1,5 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+import { Container, Nav,  Navbar,  NavDropdown } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hook/useAuth';
 
@@ -7,10 +7,10 @@ const Navigation = () => {
     const { user, handleSignOut } = useAuth()
     return (
         <div>
-            <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+            <Navbar sticky="top" collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand className="nav-link">
-                        <Link className="nav-link" to="/home">React-Bootstrap</Link>
+                        <Link className="nav-link text-info fw-bold" to="/home">OBOKASH</Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
@@ -21,7 +21,7 @@ const Navigation = () => {
                                     <Link className="nav-link text-dark" to="/umrahPackages">Umrah Packages</Link>
                                 </NavDropdown.Item>
                                 <NavDropdown.Item>
-                                    <Link className="nav-link text-dark" to="/tourPackages">Tour Packages </Link>
+                                    <Link className="nav-link text-dark" to="/home">Tour Packages </Link>
                                 </NavDropdown.Item>
 
                                 {/* divider */}
@@ -29,9 +29,9 @@ const Navigation = () => {
                                 <NavDropdown.Item href="#action/3.4">Separated link</NavDropdown.Item> */}
                             </NavDropdown>
                             {/* nav link */}
-                            <Nav.Link>
+                            {/* <Nav.Link>
                                 <Link className="nav-link" to="/">SS</Link>
-                            </Nav.Link>
+                            </Nav.Link> */}
                             <Nav.Link>
                                 <Link className="nav-link" to="/contact">Contact Us</Link>
                             </Nav.Link>
@@ -44,7 +44,7 @@ const Navigation = () => {
                             {/* <Nav.Link href="#deets">Register</Nav.Link> */}
                             {
                                 user.email ? <div>
-                                    <Nav.Link><button onClick={handleSignOut}>Logout</button></Nav.Link> 
+                                    <Nav.Link><button className="btn btn-danger" onClick={handleSignOut}>Logout</button></Nav.Link> 
                                     
                                 </div> :
                                     <Nav.Link>

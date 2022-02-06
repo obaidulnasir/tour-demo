@@ -22,12 +22,13 @@ const SinglePackage = () => {
                 <Row>
                     <Col border md={8}>
                         <div>
+                            <img src={singlePackage.img} width="80%" alt="img" />
+                        </div>
+                        <div className="my-4">
                             <h3>{singlePackage.pakckageName}</h3>
                             <h4>{singlePackage.price} $</h4>
                         </div>
-                        <div>
-                            {/* imge or slide here */}
-                        </div>
+
                         {/* Accordiern  */}
                         <div>
                             <Accordion defaultActiveKey="0">
