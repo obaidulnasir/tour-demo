@@ -11,6 +11,8 @@ import Tour from './components/Packages/Tour/Tour';
 import Footer from './components/shared/Footer/Footer';
 import PrivateRoute from './components/Login/PrivateRoute/PrivateRoute';
 import Dashboard from './components/Dashboard/Dashboard';
+import SinglePackage from './components/Packages/SinglePackage/SinglePackage';
+import BookNow from './components/shared/BookNow/BookNow';
 
 function App() {
   return (
@@ -34,6 +36,12 @@ function App() {
             <Route path="/tourPackages">
               <Tour></Tour>
             </Route>
+            <Route path="/package/:id">
+              <SinglePackage></SinglePackage>
+            </Route>
+            <PrivateRoute path="/bookNow/:id">
+              <BookNow></BookNow>
+            </PrivateRoute>
             <PrivateRoute path="/dashboard">
               <Dashboard></Dashboard>
             </PrivateRoute>

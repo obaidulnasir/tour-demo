@@ -29,7 +29,7 @@ const UmrahPackges = () => {
                                         {pac.description.slice(0, 200)}...
                                       </Card.Text>
                                 </Card.Body>
-                                <Link to="" className="text-center">
+                                <Link to={`package/${pac._id}`} className="text-center">
                                     <button className="btn btn-info">More Details</button>
                                 </Link>
                             </Card>
