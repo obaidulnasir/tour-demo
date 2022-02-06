@@ -1,8 +1,12 @@
 import React from 'react';
 import "./Dashboard.css"
 import useAuth from '../../hook/useAuth';
+import { Switch, Route, Link, useRouteMatch } from "react-router-dom";
+import MyOrder from './MyOrder/MyOrder';
+import AddPackage from './AddPackage/AddPackage';
 
 const Dashboard = () => {
+    const { path, url } = useRouteMatch();
     const { user } = useAuth();
     return (
         <div>
@@ -14,11 +18,25 @@ const Dashboard = () => {
                 </div>
                 <div>
                     <div className="d-grid gap-2 d-md-block">
-                        <button className="btn btn-primary" type="button">My Order</button>
-                        <button className="btn btn-primary" type="button">Add Package</button>
+                        <Link to={`${url}`}>
+                            <button className="btn btn-primary mx-1" type="button">My Order</button>
+                        </Link>
+                        <Link to={`${url}/addPackage`}>
+                            <button className="btn btn-primary mx-1" type="button">Add Package</button>
+                        </Link>
                     </div>
                 </div>
                 <hr />
+                <div>
+                    <Switch>
+                        <Route exact path={path}>
+                            <MyOrder></MyOrder>
+                        </Route>
+                        <Route exact path={`${path}/addPackage`}>
+                            <AddPackage></AddPackage>
+                        </Route>
+                    </Switch>
+                </div>
 
 
                 <br /><br /><br /><br /><br /><br />
