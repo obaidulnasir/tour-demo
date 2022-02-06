@@ -14,7 +14,7 @@ const Banner = () => {
                         alt="First slide"
                     />
                     <Carousel.Caption>
-                        <h3></h3>
+                        <h2 className="text-info fs-1"></h2>
                         <p></p>
                     </Carousel.Caption>
                 </Carousel.Item>

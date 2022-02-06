@@ -4,7 +4,7 @@ import { Col, Container, Row } from 'react-bootstrap';
 const About = () => {
     return (
         <div>
-            <Container>
+            <Container className="my-5">
                 <Row>
                     <Col>
                         <Col>
@@ -19,7 +19,7 @@ const About = () => {
                     </Col>
                     <Col>
                         <Col>
-                            <img src="" alt="" />
+                            <video width="320" height="240" controls src="https://youtu.be/cpcG5mbSTnQ"></video>
                         </Col>
                         <Col>
                             <img src="" alt="" />

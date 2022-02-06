@@ -8,7 +8,6 @@ const Home = () => {
     return (
         <div>
             <Banner></Banner>
-            <h4>{user?.displayName}</h4>
             <About />
             
         </div>

@@ -32,9 +32,9 @@ const Navigation = () => {
                             {/* <Nav.Link>
                                 <Link className="nav-link" to="/">SS</Link>
                             </Nav.Link> */}
-                            <Nav.Link>
+                            {/* <Nav.Link>
                                 <Link className="nav-link" to="/contact">Contact Us</Link>
-                            </Nav.Link>
+                            </Nav.Link> */}
                             <Nav.Link>
                                 <Link className="nav-link btn btn-info text-white" rule="button" to="/dashboard">Dashboard</Link>
                             </Nav.Link>
