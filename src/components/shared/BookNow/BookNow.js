@@ -5,7 +5,7 @@ import useAuth from '../../../hook/useAuth';
 
 
 const BookNow = (props) => {
-    const { id, packageName } = props;
+    const {packageName } = props;
     const { user } = useAuth();
     const {
         register,
@@ -17,7 +17,7 @@ const BookNow = (props) => {
     //Make order
     const onSubmit = (data) => {
         console.log(data);
-        fetch("http://localhost:5000/booking", {
+        fetch("https://infinite-temple-02578.herokuapp.com/booking", {
           method: "POST",
           headers: { "content-type": "application/json" },
           body: JSON.stringify(data),

@@ -9,9 +9,9 @@ const AddPackage = () => {
         reset,
         formState: { errors },
     } = useForm();
-
+    // https://infinite-temple-02578.herokuapp.com/allPackages
     const onSubmit = (data) => {
-        fetch("http://localhost:5000/addPackage", {
+        fetch("https://infinite-temple-02578.herokuapp.com/addPackage", {
             method: "POST",
             headers: { "content-type": "application/json" },
             body: JSON.stringify(data),

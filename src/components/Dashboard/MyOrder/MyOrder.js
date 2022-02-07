@@ -6,10 +6,10 @@ const MyOrder = () => {
     const { user } = useAuth();
     const [myOrder, setMyOrder] = useState([]);
     useEffect(() => {
-        fetch(`http://localhost:5000/myOrder/${user.email}`)
+        fetch(`https://infinite-temple-02578.herokuapp.com/myOrder/${user.email}`)
             .then(res => res.json())
             .then(data => setMyOrder(data));
-    }, [myOrder]);
+    }, [myOrder, user?.email]);
     // console.log(myOrder)
 
     //Delete request
@@ -17,7 +17,7 @@ const MyOrder = () => {
         // console.log(id);
         const toDelete = window.confirm('Are you sure to delete your booking??')
         if(toDelete){
-          fetch(`http://localhost:5000/deleteBooking/${id}`, {
+          fetch(`https://infinite-temple-02578.herokuapp.com/deleteBooking/${id}`, {
           method: "DELETE",
           headers: { "content-type": "application/json" },
         })

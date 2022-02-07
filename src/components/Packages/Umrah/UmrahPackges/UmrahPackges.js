@@ -6,7 +6,7 @@ const UmrahPackges = () => {
     // ekhane data Fetch hobe 
     const [umrahPac, setUmrahPac] = useState([]);
     useEffect(() => {
-        fetch("http://localhost:5000/allpackages")
+        fetch("https://infinite-temple-02578.herokuapp.com/allpackages")
             .then(res => res.json())
             .then(data => setUmrahPac(data));
     }, [])

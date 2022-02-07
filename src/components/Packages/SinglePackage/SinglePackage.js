@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Accordion, Col, Container, Row } from 'react-bootstrap';
 import { useParams } from 'react-router';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import BookNow from '../../shared/BookNow/BookNow';
 import ContactCard from '../../shared/ContactCard/ContactCard';
 import Banner from '../Umrah/Banner/Banner';
@@ -11,10 +11,10 @@ const SinglePackage = () => {
     const { id } = useParams();
     const [singlePackage, setSinglePackage] = useState({});
     useEffect(() => {
-        fetch(`http://localhost:5000/singlePackage/${id}`)
+        fetch(`https://infinite-temple-02578.herokuapp.com/singlePackage/${id}`)
             .then(res => res.json())
             .then(data => setSinglePackage(data));
-    }, [])
+    }, [id])
     return (
         <div>
             <Banner></Banner>
