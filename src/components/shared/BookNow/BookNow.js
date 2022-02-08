@@ -5,7 +5,7 @@ import useAuth from '../../../hook/useAuth';
 
 
 const BookNow = (props) => {
-    const {packageName } = props;
+    const { packageName } = props;
     const { user } = useAuth();
     const {
         register,
@@ -18,22 +18,22 @@ const BookNow = (props) => {
     const onSubmit = (data) => {
         console.log(data);
         fetch("https://infinite-temple-02578.herokuapp.com/booking", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify(data),
+            method: "POST",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(data),
         })
-          .then((res) => res.json())
-          .then((data) => {
-            alert("product added successfully!!");
-            reset();
-          });
+            .then((res) => res.json())
+            .then((data) => {
+                alert("product added successfully!!");
+                reset();
+            });
     };
-    
+
     return (
         <div>
             <Row>
                 <Col>
-                <h2 className="text-info my-3">BOOKING HERE</h2>
+                    <h2 className="text-info my-3">BOOKING HERE</h2>
                     <form onSubmit={handleSubmit(onSubmit)}>
                         <div className="form-group">
                             <label>Name</label>

@@ -5,8 +5,8 @@ import {
     GoogleAuthProvider,
     onAuthStateChanged,
     signOut,
-    signInWithEmailAndPassword,
-    createUserWithEmailAndPassword,
+    // signInWithEmailAndPassword,
+    // createUserWithEmailAndPassword,
 } from "firebase/auth";
 import { useEffect, useState } from "react";
 
@@ -37,7 +37,7 @@ const useFirebase = () => {
               .finally(()=>setIsLoading(false));
     };
 
-    //SignOut
+   
     //  logout
     const handleSignOut = () => {
         // setIsLoading(true);

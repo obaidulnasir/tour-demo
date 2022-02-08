@@ -12,9 +12,8 @@ const UmrahPackges = () => {
     }, [])
 
     return (
+        
         <div>
-          
-
             <Container className="my-5">
                 <Row xs={1} md={3} className="g-4 ">
                     {umrahPac.map((pac) => (
